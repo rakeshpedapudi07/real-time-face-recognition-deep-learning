@@ -1,4 +1,17 @@
+# Ignore datasets and personal data
 dataset/
 embeddings.pickle
 trainer/
-pycache/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+.env
+.venv
+
+# OS / editor files
+.DS_Store
+.idea/
+.vscode/
