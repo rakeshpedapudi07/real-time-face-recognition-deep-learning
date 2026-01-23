@@ -84,7 +84,7 @@ face_project/
 ## ▶️ How to Run
 
 ### 1️⃣ Create Face Dataset
-```bash
+
 python dataset_creator.py
 2️⃣ Extract Face Embeddings
 python extract_embeddings.py
