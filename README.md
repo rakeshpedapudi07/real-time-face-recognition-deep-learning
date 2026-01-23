@@ -35,7 +35,7 @@ The system is designed to work reliably even under **moderate and low-light cond
 ---
 
 ## 📁 Project Structure
-
+```
 face_project/
 │
 ├── models/
@@ -57,6 +57,7 @@ face_project/
 │
 ├── README.md
 └── .gitignore
+```
 
 ---
 
