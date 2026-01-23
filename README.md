@@ -39,9 +39,9 @@ The system is designed to work reliably even under **moderate and low-light cond
 face_project/
 │
 ├── models/
-│ ├── deploy.prototxt
-│ ├── res10_300x300_ssd_iter_140000.caffemodel
-│ └── openface_nn4.small2.v1.t7
+│   ├── deploy.prototxt
+│   ├── res10_300x300_ssd_iter_140000.caffemodel
+│   └── openface_nn4.small2.v1.t7
 │
 ├── dataset_creator.py
 ├── extract_embeddings.py
