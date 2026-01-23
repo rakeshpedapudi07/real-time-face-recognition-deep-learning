@@ -86,6 +86,7 @@ face_project/
 1️⃣ Create Face Dataset
 ``
 python dataset_creator.py ``
+
 2️⃣ Extract Face Embeddings
 ``
 python extract_embeddings.py``
@@ -141,7 +142,8 @@ Multi-user large-scale dataset support
  ## 👨‍💻 Author
 
 Rakesh Pedapudi
-B.Tech (Artificial Intelligence)
+
+B.Techn (Artificial Intelligence)
 Focused on Computer Vision and Deep Learning
 
  ## 📄 License
