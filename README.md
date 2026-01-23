@@ -61,7 +61,7 @@ face_project/
 
 ---
 
-## 🚀 Workflow
+## 🚀System Workflow
 
 1. **Dataset Creation**
    - Capture multiple face images per person using webcam
@@ -83,31 +83,34 @@ face_project/
 
 ## ▶️ How to Run
 
-### 1️⃣ Create Face Dataset
-
-python dataset_creator.py
+1️⃣ Create Face Dataset
+``
+python dataset_creator.py ``
 2️⃣ Extract Face Embeddings
-python extract_embeddings.py
+``
+python extract_embeddings.py``
 
 3️⃣ Train the Model
-python train_model.py
+``
+python train_model.py``
 
 4️⃣ Run Real-Time Face Recognition
-python recognize_face_dl.py
+``
+python recognize_face_dl.py``
 
 
-Press ESC to exit the application.
+Press `ESC` to exit the application.
 
-📊 Confidence Calculation
+ ## 📊 Confidence Calculation
 
 Cosine distance is used to compare face embeddings:
 
-confidence = (1 - distance) × 100
+``confidence = (1 - distance) × 100``
 
 
 Lower distance indicates higher similarity and confidence.
 
-🔐 Privacy & Ethics
+ ## 🔐 Privacy & Ethics
 
 Face images are not uploaded to GitHub
 
@@ -115,7 +118,7 @@ Only trained models and code are shared
 
 Dataset remains local to the system
 
-⚠️ Limitations
+ ## ⚠️ Limitations
 
 Accuracy depends on dataset quality
 
@@ -123,7 +126,7 @@ Extreme lighting or occlusion may reduce recognition accuracy
 
 Not intended for production-level surveillance
 
-🔮 Future Enhancements
+ ## 🔮 Future Enhancements
 
 Face alignment for improved accuracy
 
@@ -135,13 +138,13 @@ Web or mobile deployment
 
 Multi-user large-scale dataset support
 
-👨‍💻 Author
+ ## 👨‍💻 Author
 
 Rakesh Pedapudi
 B.Tech (Artificial Intelligence)
 Focused on Computer Vision and Deep Learning
 
-📄 License
+ ## 📄 License
 
 This project is licensed under the MIT License.
 
