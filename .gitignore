@@ -1,7 +1,6 @@
-# Ignore datasets and personal data
+# Ignore datasets and embeddings
 dataset/
 embeddings.pickle
-trainer/
 
 # Python cache
 __pycache__/
@@ -11,7 +10,7 @@ __pycache__/
 .env
 .venv
 
-# OS / editor files
-.DS_Store
-.idea/
+# Editor files
 .vscode/
+.idea/
+trainer/
