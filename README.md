@@ -177,7 +177,6 @@ Accuracy depends on dataset quality
 Extreme lighting or occlusion may reduce recognition accuracy
 
 Not intended for production-level surveillance
-
  ##  Future Enhancements
 
 Face alignment for improved accuracy
