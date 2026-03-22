@@ -1,11 +1,11 @@
-
+ 
 # Real-time-face-recognition-Deep-learning
 
 Deep learning based real-time face recognition using OpenCV.
 
 ---
 
-## 🔍 Project Overview
+##  Project Overview
 
 This project implements a **real-time face recognition system** using deep learning and OpenCV.  
 It detects faces from a live webcam feed, extracts facial embeddings using a pre-trained neural network, and recognizes known individuals with a confidence score.
@@ -14,7 +14,7 @@ The system is designed to work reliably even under **moderate and low-light cond
 
 ---
 
-## 🧠 Technologies Used
+##  Technologies Used
 
 - Python
 - OpenCV (cv2)
@@ -25,7 +25,7 @@ The system is designed to work reliably even under **moderate and low-light cond
 
 ---
 
-## 🧩 Models Used
+##  Models Used
 
 | Task | Model |
 |----|----|
@@ -80,12 +80,12 @@ The system is designed to work reliably even under **moderate and low-light cond
 │ Confidence Score   │
 └────────────────────┘
 ```
-## ⚠️ Note:
+##  Note:
 This architecture represents the logical flow of the system.
 No biometric data, personal images, or embeddings are exposed in this repository.
 
 
-## 📁 Project Structure
+##  Project Structure
 ```
 face_project/
 │
@@ -112,7 +112,7 @@ face_project/
 
 ---
 
-## 🚀System Workflow
+## System Workflow
 
 1. **Dataset Creation**
    - Capture multiple face images per person using webcam
@@ -132,21 +132,21 @@ face_project/
 
 ---
 
-## ▶️ How to Run
+##  How to Run
 
-1️⃣ Create Face Dataset
+1️. Create Face Dataset
 ``
 python dataset_creator.py ``
 
-2️⃣ Extract Face Embeddings
+2️. Extract Face Embeddings
 ``
 python extract_embeddings.py``
 
-3️⃣ Train the Model
+3️. Train the Model
 ``
 python train_model.py``
 
-4️⃣ Run Real-Time Face Recognition
+4️. Run Real-Time Face Recognition
 ``
 python recognize_face_dl.py``
 
@@ -162,7 +162,7 @@ Cosine distance is used to compare face embeddings:
 
 Lower distance indicates higher similarity and confidence.
 
- ## 🔐 Privacy & Ethics
+ ##  Privacy & Ethics
 
 Face images are not uploaded to GitHub
 
@@ -170,7 +170,7 @@ Only trained models and code are shared
 
 Dataset remains local to the system
 
- ## ⚠️ Limitations
+ ##  Limitations
 
 Accuracy depends on dataset quality
 
@@ -178,7 +178,7 @@ Extreme lighting or occlusion may reduce recognition accuracy
 
 Not intended for production-level surveillance
 
- ## 🔮 Future Enhancements
+ ##  Future Enhancements
 
 Face alignment for improved accuracy
 
@@ -190,14 +190,14 @@ Web or mobile deployment
 
 Multi-user large-scale dataset support
 
- ## 👨‍💻 Author
+ ##  Author
 
 Rakesh Pedapudi
 
 B.Techn (Artificial Intelligence)
 Focused on Computer Vision and Deep Learning
 
- ## 📄 License
+ ##  License
 
 This project is licensed under the MIT License.
 
