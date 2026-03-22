@@ -153,7 +153,7 @@ python recognize_face_dl.py``
 
 Press `ESC` to exit the application.
 
- ## 📊 Confidence Calculation
+ ##  Confidence Calculation
 
 Cosine distance is used to compare face embeddings:
 
