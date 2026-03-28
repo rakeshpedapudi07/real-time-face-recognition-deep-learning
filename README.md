@@ -179,21 +179,21 @@ Extreme lighting or occlusion may reduce recognition accuracy
 Not intended for production-level surveillance
  ##  Future Enhancements
 
-Face alignment for improved accuracy
+1.Face alignment for improved accuracy
 
-Liveness detection
+2.Liveness detection
 
-GPU acceleration
+3.GPU acceleration
 
-Web or mobile deployment
+4.Web or mobile deployment
 
-Multi-user large-scale dataset support
+5.Multi-user large-scale dataset support
 
  ##  Author
 
 Rakesh Pedapudi
 
-B.Techn (Artificial Intelligence)
+B.Tech (Artificial Intelligence)
 Focused on Computer Vision and Deep Learning
 
  ##  License
