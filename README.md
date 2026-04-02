@@ -1,11 +1,10 @@
- 
-# Real-time-face-recognition-Deep-learning
+# Real-time Face Recognition (Deep Learning)
 
-Deep learning based real-time face recognition using OpenCV.
+Deep learning-based real-time face recognition using OpenCV.
 
 ---
 
-##  Project Overview
+## Project Overview
 
 This project implements a **real-time face recognition system** using deep learning and OpenCV.  
 It detects faces from a live webcam feed, extracts facial embeddings using a pre-trained neural network, and recognizes known individuals with a confidence score.
@@ -14,16 +13,17 @@ The system is designed to work reliably even under **moderate and low-light cond
 
 ---
 
-##  Technologies Used
+## Technologies Used
 
-- Python
-- OpenCV (cv2)
-- Deep Learning (OpenCV DNN module)
-- OpenFace (Face Embedding Model)
-- NumPy
-- Pickle
+- Python  
+- OpenCV (cv2)  
+- Deep Learning (OpenCV DNN module)  
+- OpenFace (Face Embedding Model)  
+- NumPy  
+- Pickle  
 
 ---
+
 ## Models Used
 
 | Task            | Model                                   | Description                          |
@@ -32,6 +32,7 @@ The system is designed to work reliably even under **moderate and low-light cond
 | Face Embedding  | OpenFace (`openface_nn4.small2.v1.t7`)  | Generates 128-D facial embeddings    |
 
 ---
+
 ## System Architecture
 
 ```mermaid
@@ -43,7 +44,9 @@ flowchart TD
     E --> F[Identity Decision]
     F --> G[Display Output - Name + Confidence]
 ```
+
 ---
+
 ## System Workflow
 
 ```mermaid
@@ -60,11 +63,6 @@ sequenceDiagram
     M->>S: Compare embeddings
     S-->>U: Display name + confidence
 ```
-
----
-##  Note:
-This architecture represents the logical flow of the system.
-No biometric data, personal images, or embeddings are exposed in this repository.
 
 ---
 
@@ -103,93 +101,96 @@ graph TD
 
 ---
 
-## System Workflow
+## System Workflow (Steps)
 
 1. **Dataset Creation**
-   - Capture multiple face images per person using webcam
-   - Images are stored class-wise (one folder per person)
+   - Capture multiple face images per person using webcam  
+   - Store images class-wise (one folder per person)
 
 2. **Embedding Extraction**
-   - Each face is passed through the OpenFace model
-   - 128-dimensional embeddings are generated
+   - Pass each face through the OpenFace model  
+   - Generate 128-dimensional embeddings  
 
 3. **Model Training**
-   - Embeddings are stored in `embeddings.pickle`
+   - Store embeddings in `embeddings.pickle`  
 
 4. **Real-Time Recognition**
-   - Face detection using SSD + ResNet
-   - Face recognition using cosine similarity
-   - Name and confidence score displayed in real time
+   - Detect faces using SSD + ResNet  
+   - Compare embeddings using cosine similarity  
+   - Display name and confidence score  
 
 ---
 
-##  How to Run
+## How to Run
 
-1️. Create Face Dataset
-``
-python dataset_creator.py ``
+### 1. Create Dataset
+```bash
+python dataset_creator.py
+```
 
-2️. Extract Face Embeddings
-``
-python extract_embeddings.py``
+### 2. Extract Embeddings
+```bash
+python extract_embeddings.py
+```
 
-3️. Train the Model
-``
-python train_model.py``
+### 3. Train Model
+```bash
+python train_model.py
+```
 
-4️. Run Real-Time Face Recognition
-``
-python recognize_face_dl.py``
-
+### 4. Run Recognition
+```bash
+python recognize_face_dl.py
+```
 
 Press `ESC` to exit the application.
 
- ##  Confidence Calculation
+---
 
-Cosine distance is used to compare face embeddings:
+## Confidence Calculation
 
-``confidence = (1 - distance) × 100``
-
+```math
+confidence = (1 - distance) \times 100
+```
 
 Lower distance indicates higher similarity and confidence.
 
- ##  Privacy & Ethics
+---
 
-Face images are not uploaded to GitHub
+## Privacy & Ethics
 
-Only trained models and code are shared
-
-Dataset remains local to the system
-
- ##  Limitations
-
-Accuracy depends on dataset quality
-
-Extreme lighting or occlusion may reduce recognition accuracy
-
-Not intended for production-level surveillance
- ##  Future Enhancements
-
-1.Face alignment for improved accuracy
-
-2.Liveness detection
-
-3.GPU acceleration
-
-4.Web or mobile deployment
-
-5.Multi-user large-scale dataset support
-
- ##  Author
-
-Rakesh Pedapudi
-
-B.Tech (Artificial Intelligence)
-Focused on Computer Vision and Deep Learning
-
- ##  License
-
-This project is licensed under the MIT License.
-
+- Face images are not uploaded to GitHub  
+- Only trained models and code are shared  
+- Dataset remains local to the system  
 
 ---
+
+## Limitations
+
+- Accuracy depends on dataset quality  
+- Extreme lighting or occlusion may reduce accuracy  
+- Not intended for production-level surveillance  
+
+---
+
+## Future Enhancements
+
+- Face alignment for improved accuracy  
+- Liveness detection  
+- GPU acceleration  
+- Web or mobile deployment  
+- Multi-user large-scale dataset support  
+
+---
+
+## Author
+
+**Rakesh Pedapudi**  
+B.Tech (Artificial Intelligence)  
+Focused on Computer Vision and Deep Learning  
+
+---
+
+## License
+
+This project is licensed under the **MIT License**.
