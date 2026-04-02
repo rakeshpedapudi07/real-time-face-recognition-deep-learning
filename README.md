@@ -24,90 +24,81 @@ The system is designed to work reliably even under **moderate and low-light cond
 - Pickle
 
 ---
+## Models Used
 
-##  Models Used
-
-| Task | Model |
-|----|----|
-| Face Detection | SSD + ResNet (Caffe) |
-| Face Embedding | OpenFace (`openface_nn4.small2.v1.t7`) |
+| Task            | Model                                   | Description                          |
+|-----------------|------------------------------------------|--------------------------------------|
+| Face Detection  | SSD + ResNet (Caffe)                    | Detects faces in video frames        |
+| Face Embedding  | OpenFace (`openface_nn4.small2.v1.t7`)  | Generates 128-D facial embeddings    |
 
 ---
- ## System Architecture
-``` 
-┌────────────────────┐
-│     Webcam Input   │
-└─────────┬──────────┘
-          │
-          ▼
-┌────────────────────┐
-│   Face Detection   │
-│  (SSD + ResNet)    │
-│  OpenCV DNN        │
-└─────────┬──────────┘
-          │
-          ▼
-┌────────────────────┐
-│  Face Cropping &   │
-│   Preprocessing    │
-│ (Resize, Normalize)│
-└─────────┬──────────┘
-          │
-          ▼
-┌────────────────────┐
-│ Face Embedding     │
-│  Extraction        │
-│ (OpenFace Model)   │
-│ 128-D Vector       │
-└─────────┬──────────┘
-          │
-          ▼
-┌────────────────────┐
-│ Embedding Matching │
-│ (Cosine Distance)  │
-└─────────┬──────────┘
-          │
-          ▼
-┌────────────────────┐
-│ Identity Decision  │
-│ Name + Confidence  │
-└─────────┬──────────┘
-          │
-          ▼
-┌────────────────────┐
-│ Real-Time Display  │
-│ Bounding Box +     │
-│ Confidence Score   │
-└────────────────────┘
+## System Architecture
+
+```mermaid
+flowchart TD
+    A[Webcam Input] --> B[Face Detection - SSD ResNet]
+    B --> C[Face Cropping & Preprocessing]
+    C --> D[Face Embedding - OpenFace]
+    D --> E[Embedding Matching - Cosine Distance]
+    E --> F[Identity Decision]
+    F --> G[Display Output - Name + Confidence]
 ```
+---
+## System Workflow
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant W as Webcam
+    participant D as Detector
+    participant M as Model
+    participant S as System
+
+    U->>W: Show face
+    W->>D: Capture frame
+    D->>M: Extract embedding
+    M->>S: Compare embeddings
+    S-->>U: Display name + confidence
+```
+
+---
 ##  Note:
 This architecture represents the logical flow of the system.
 No biometric data, personal images, or embeddings are exposed in this repository.
 
+---
 
-##  Project Structure
-```
-face_project/
-│
-├── models/
-│   ├── deploy.prototxt
-│   ├── res10_300x300_ssd_iter_140000.caffemodel
-│   └── openface_nn4.small2.v1.t7
-│
-├── dataset_creator.py
-├── extract_embeddings.py
-├── train_model.py
-├── recognize_face.py
-├── recognize_face_dl.py
-│
-├── camera_test.py
-├── face_detect_test.py
-│
-├── embeddings.pickle
-├── haarcascade_frontalface_default.xml
-│
-├── README.md
-└── .gitignore
+## Project Structure (Visual)
+
+```mermaid
+graph TD
+    A[face-recognition-project]
+
+    subgraph Models
+        B[models]
+        B --> B1[SSD Model]
+        B --> B2[OpenFace Model]
+    end
+
+    subgraph Scripts
+        C[dataset_creator.py]
+        D[extract_embeddings.py]
+        E[train_model.py]
+        F[recognize_face_dl.py]
+    end
+
+    subgraph Assets
+        G[embeddings.pickle]
+        H[haarcascade.xml]
+    end
+
+    A --> B
+    A --> C
+    A --> D
+    A --> E
+    A --> F
+    A --> G
+    A --> H
 ```
 
 ---
