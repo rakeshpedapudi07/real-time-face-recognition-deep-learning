@@ -5,7 +5,7 @@ Deep learning-based real-time face recognition using OpenCV.
 ---
 
 ## Project Overview
-
+  
 This project implements a **real-time face recognition system** using deep learning and OpenCV.  
 It detects faces from a live webcam feed, extracts facial embeddings using a pre-trained neural network, and recognizes known individuals with a confidence score.
 
