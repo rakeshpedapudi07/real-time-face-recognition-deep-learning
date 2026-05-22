@@ -3,7 +3,7 @@
 Deep learning-based real-time face recognition using OpenCV.
 
 ---
-
+ 
 ## Project Overview
   
 This project implements a **real-time face recognition system** using deep learning and OpenCV.  
