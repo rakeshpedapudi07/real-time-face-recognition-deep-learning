@@ -11,7 +11,7 @@ It detects faces from a live webcam feed, extracts facial embeddings using a pre
 
 The system is designed to work reliably even under **moderate and low-light conditions**.   
 
----
+---  
 
 ## Technologies Used
 
