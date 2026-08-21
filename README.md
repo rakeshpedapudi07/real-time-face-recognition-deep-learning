@@ -18,7 +18,7 @@ The system is designed to work reliably even under **moderate and low-light cond
 - Python  
 - OpenCV (cv2)  
 - Deep Learning (OpenCV DNN module)  
-- OpenFace (Face Embedding Model)  
+- OpenFace (Face Embedding Model)      
 - NumPy  
 - Pickle  
 
