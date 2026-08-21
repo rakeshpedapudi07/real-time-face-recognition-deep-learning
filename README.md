@@ -31,7 +31,7 @@ The system is designed to work reliably even under **moderate and low-light cond
 | Face Detection  | SSD + ResNet (Caffe)                    | Detects faces in video frames        |
 | Face Embedding  | OpenFace (`openface_nn4.small2.v1.t7`)  | Generates 128-D facial embeddings    |
 
----
+---    
 
 ## System Architecture
 
